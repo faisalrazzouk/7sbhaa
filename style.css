@@ -383,6 +383,7 @@ input::-webkit-inner-spin-button {
     padding: 5px;
     color: var(--true);
     font-size: 1em;
+    Opacity:0;
 }
 .btn#copy_btn{
     position: relative;
