@@ -22,7 +22,7 @@ li {
     --bold-shadow: #fff;
     --shadow: #d1d9e6;
     --true: #22c962;
-    --false: #e40f0f;
+    --false: #f72414;
 }
 
 body {
@@ -32,13 +32,18 @@ body {
     user-select: none;
 }
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    color: var(--text);
+    height: 30px;
+    font-weight: 700;
+    padding: 0 5px;
+    line-height: 30px;
 }
-header nav {
+.beta_info {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+header nav {
     height: 40px;
     background-color: var(--shadow);
     color: var(--text);
@@ -238,11 +243,11 @@ input::-webkit-inner-spin-button {
     text-align: center;
     border-radius: 5px;
     padding: 10px;
-    transition: opacity 500ms ease-out;
+    transition:  400ms ease-out;
     position: absolute;
     z-index: 100000;
-    left: -100%;
-    top: 120%;
+    left: 0%;
+    top: 150%;
 }
 
 .text.hint:hover:before {
@@ -267,6 +272,7 @@ input::-webkit-inner-spin-button {
     right: 0;
     opacity: 1e-5;
     pointer-events: none;
+    transition: 300ms ease-out;
 }
 
 .label {
@@ -279,8 +285,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-
-.indicator {
+.indicator{
     position: relative;
     border-radius: 50%;
     height: 30px;
@@ -310,7 +315,12 @@ input::-webkit-inner-spin-button {
 
 .indicator:hover::before,
 .indicator:hover::after {
-    background: var(--shadow);
+    border:1px solid var(--true);
+}
+
+.state:checked~.label .indicator:hover::before,
+.state:checked~.label .indicator:hover::after {
+    border:none;
 }
 
 .indicator::before {
@@ -333,6 +343,48 @@ input::-webkit-inner-spin-button {
     opacity: 0;
 }
 
+.indicator-checkBox {
+    position: relative;
+    border-radius: 10px;
+    height: 20px;
+    width: 40px;
+    background: var(--primery);
+    box-shadow: 
+    -5px -4px 8px 0px var(--bold-shadow),
+    8px 4px 12px 0px var(--shadow);
+    z-index: 1;
+    transition: 500ms ease-in-out;
+}
+.indicator-checkBox::before,
+.indicator-checkBox::after {
+    content: '';
+    position: absolute;
+    background: var(--shadow);
+    top: 1px;
+    right:1px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 500ms linear;
+}
+
+
+.indicator-checkBox::after {
+    background-color: var(--shadow);
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+}
+.state:checked~.label .indicator-checkBox::after {
+    transform:  translateX(-110%);
+    opacity: 1;
+}
+.state:checked~.label .indicator-checkBox::before {
+    transform:  translateX(-110%);
+    opacity: 0;
+}
+.state:checked~.label .indicator-checkBox{
+    background-color: var(--true);
+}
 
 .label:hover .text {
     color: var(--text);
@@ -383,6 +435,7 @@ input::-webkit-inner-spin-button {
     padding: 5px;
     color: var(--true);
     font-size: 1em;
+    Opacity:0;
 }
 .btn#copy_btn{
     position: relative;

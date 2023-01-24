@@ -55,18 +55,18 @@ function calculateCost(cost) {
         var tamara1 = cost / 3;
 
         output.innerHTML =
-            ` 
+            ` السعر هوه *| ${cost.toFixed(1)} |* : <br>
 الدفعات كالأتي : <br>
 عن طريق تابي  <br>
-1️⃣-) *| ${tabby1.toFixed(2)} |* <br>  
-2️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-3️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-4️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-===============<br>
+1️⃣-) *| ${tabby1.toFixed(1)} |* <br>  
+2️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+3️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+4️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+*===============*<br>
 او عن طريق تمارا <br>
-1️⃣-) *| ${tamara1.toFixed(2)} |* <br>
-2️⃣-) *| ${tamara1.toFixed(2)} |* <br>
-3️⃣-) *| ${tamara1.toFixed(2)} |* 
+1️⃣-) *| ${tamara1.toFixed(1)} |* <br>
+2️⃣-) *| ${tamara1.toFixed(1)} |* <br>
+3️⃣-) *| ${tamara1.toFixed(1)} |* 
             `;
     } else if (cost == 3201 || cost <= 5000) {
 
@@ -80,15 +80,16 @@ function calculateCost(cost) {
 
         output.innerHTML =
             `
+           السعر هوه *| ${cost.toFixed(1)} |* : <br>
 الدفعات كالأتي : <br>
 عن طريق تابي  <br>
-1️⃣-) *| ${tabby1.toFixed(2)} |* <br>  
-2️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-3️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-4️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-===============<br>
+1️⃣-) *| ${tabby1.toFixed(1)} |* <br>  
+2️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+3️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+4️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+*===============*<br>
 او عن طريق تمارا <br>
-1️⃣-) *| ${tamara1.toFixed(2)} |* <br>
+1️⃣-) *| ${tamara1.toFixed(1)} |* <br>
 2️⃣-) *| 1000 |* <br>
 3️⃣-) *| 1000 |* 
             `
@@ -108,17 +109,17 @@ function calculateCost(cost) {
 
         output.innerHTML =
             `
-  السعر هوه (*${cost}*) على الاقساط يكون كالأتي : <br>
+  السعر هوه (*${cost.toFixed(1)}*) على الاقساط يكون كالأتي : <br>
   تقدر تقسط  من  هذا المبلغ عن طريق رابط  دفع  بقيمه *5000* ريال <br>
   بسويه لك اول  ماتجهز  للطلب , وتكون الدفعات :  <br>
-  1️⃣-) *| ${tabby1.toFixed(2)} |* <br>  
-  2️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-  3️⃣-) *| ${tabby2.toFixed(2)} |* <br>
-  4️⃣-) *| ${tabby2.toFixed(2)} |* <br>
+  1️⃣-) *| ${tabby1.toFixed(1)} |* <br>  
+  2️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+  3️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+  4️⃣-) *| ${tabby2.toFixed(1)} |* <br>
   ===============<br>
-  اما بالنسبة للمبلغ الي فوق ال *5000* الي  هو (*${transfer.toFixed(2)}*) فيتم  تحويله الان مع دفعة التقسيط  الاولى <br>
+  اما بالنسبة للمبلغ الي فوق ال *5000* الي  هو (*${transfer.toFixed(1)}*) فيتم  تحويله الان مع دفعة التقسيط  الاولى <br>
 
-  يعني  انت  الان لازم  تدفع (2500) + (*${+transfer.toFixed(2)}*) = *${totalToPay.toFixed(2)}*
+  يعني  انت  الان لازم  تدفع (2500) + (*${+transfer.toFixed(1)}*) = *${totalToPay.toFixed(1)}*
 وبعدين 3 اشهر كل شهر 833.33 ريال`;
 
     }
@@ -286,12 +287,12 @@ _btn.addEventListener('click', () => {
             output.classList.add('error');
             circle_green.classList.add('disabeld');
             circle_red.classList.remove('disabeld');
-        }else if (costttt1 == 0){
-            output.innerHTML = `<b>خطـــأ واضـــح</b><br>  لو سمحت كمل معروفك و حطلنا رقم  لنحسبه 😒`;
         } else if (_reg_percent.checked == true) {
             reg(cost);
         } else if (_add_percent.checked == true) {
             percent(cost);
+        }else if (costttt1 == 0){
+            output.innerHTML = `<b>خطـــأ واضـــح</b><br>  لو سمحت كمل معروفك و حطلنا رقم  لنحسبه 😒`;
         }
     } else {
         _default(cost);
