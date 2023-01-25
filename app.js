@@ -58,15 +58,15 @@ function calculateCost(cost) {
             ` السعر هوه *| ${cost.toFixed(1)} |* : <br>
 الدفعات كالأتي : <br>
 عن طريق تابي  <br>
-1️⃣-) *| ${tabby1.toFixed(1)} |* <br>  
-2️⃣-) *| ${tabby2.toFixed(1)} |* <br>
-3️⃣-) *| ${tabby2.toFixed(1)} |* <br>
-4️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+الدفعة الاولى-) *| ${tabby1.toFixed(1)} |* <br>  
+الدفعة الثانية-) *| ${tabby2.toFixed(1)} |* <br>
+الدفعة الثالثة-) *| ${tabby2.toFixed(1)} |* <br>
+الدفعة الرابعة-) *| ${tabby2.toFixed(1)} |* <br>
 *===============*<br>
 او عن طريق تمارا <br>
-1️⃣-) *| ${tamara1.toFixed(1)} |* <br>
-2️⃣-) *| ${tamara1.toFixed(1)} |* <br>
-3️⃣-) *| ${tamara1.toFixed(1)} |* 
+الدفعة الاولى-) *| ${tamara1.toFixed(1)} |* <br>
+الدفعة الثانية-) *| ${tamara1.toFixed(1)} |* <br>
+الدفعة الثالثة-) *| ${tamara1.toFixed(1)} |* 
             `;
     } else if (cost == 3201 || cost <= 5000) {
 
@@ -83,15 +83,15 @@ function calculateCost(cost) {
            السعر هوه *| ${cost.toFixed(1)} |* : <br>
 الدفعات كالأتي : <br>
 عن طريق تابي  <br>
-1️⃣-) *| ${tabby1.toFixed(1)} |* <br>  
-2️⃣-) *| ${tabby2.toFixed(1)} |* <br>
-3️⃣-) *| ${tabby2.toFixed(1)} |* <br>
-4️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+الدفعة الاولى-) *| ${tabby1.toFixed(1)} |* <br>  
+الدفعة الثانية-) *| ${tabby2.toFixed(1)} |* <br>
+الدفعة الثالثه-) *| ${tabby2.toFixed(1)} |* <br>
+الدفعة الرابعة-) *| ${tabby2.toFixed(1)} |* <br>
 *===============*<br>
 او عن طريق تمارا <br>
-1️⃣-) *| ${tamara1.toFixed(1)} |* <br>
-2️⃣-) *| 1000 |* <br>
-3️⃣-) *| 1000 |* 
+الدفعة الاولى-) *| ${tamara1.toFixed(1)} |* <br>
+الدفعة الثانية-) *| 1000 |* <br>
+الدفعة الثالثة-) *| 1000 |* 
             `
 
     } else if (cost >= 5001) {
@@ -112,10 +112,10 @@ function calculateCost(cost) {
   السعر هوه (*${cost.toFixed(1)}*) على الاقساط يكون كالأتي : <br>
   تقدر تقسط  من  هذا المبلغ عن طريق رابط  دفع  بقيمه *5000* ريال <br>
   بسويه لك اول  ماتجهز  للطلب , وتكون الدفعات :  <br>
-  1️⃣-) *| ${tabby1.toFixed(1)} |* <br>  
-  2️⃣-) *| ${tabby2.toFixed(1)} |* <br>
-  3️⃣-) *| ${tabby2.toFixed(1)} |* <br>
-  4️⃣-) *| ${tabby2.toFixed(1)} |* <br>
+ الدفعة الاولى-) *| ${tabby1.toFixed(1)} |* <br>  
+الدفعة الثانية-) *| ${tabby2.toFixed(1)} |* <br>
+ الدفعة الثالثة-) *| ${tabby2.toFixed(1)} |* <br>
+  الدفعة الرابعة-) *| ${tabby2.toFixed(1)} |* <br>
   ===============<br>
   اما بالنسبة للمبلغ الي فوق ال *5000* الي  هو (*${transfer.toFixed(1)}*) فيتم  تحويله الان مع دفعة التقسيط  الاولى <br>
 
