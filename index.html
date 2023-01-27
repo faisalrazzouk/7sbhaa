@@ -2,8 +2,8 @@
     
 Author "faisal kamal"
 Project start date "2023 / 1 / 10"
-version number " 1.6 beta"
-Version publication date " 2023 / 1 / 23"
+version number " 1.8 beta"
+Version publication date " 2023 / 1 / 28"
 license " free to use  ( with or without modification )"
 
  -->
@@ -20,12 +20,12 @@ license " free to use  ( with or without modification )"
 
 <body>
     <header>
-        <div class="beta_info">
-            <p class="logo">Beta ver 1.7</p>
+        <div class="beta_info unselectable">
+            <p class="logo">Beta ver 1.8</p>
             <p class="info">اصلاح بعض الاخطاء</p>
-            <p class="info">تحديث الشكل ليكون ملائما اكثر للنظر</p>
+            <!-- <p class="info">تحديث الشكل ليكون ملائما اكثر للنظر</p> -->
         </div>
-        
+
         <!--        <div>
                 
                 <p class="auther">By Fisal Kamal</p>
@@ -41,7 +41,7 @@ license " free to use  ( with or without modification )"
         </nav> -->
     </header>
     <main class="main-container" id="Home">
-        <form class="app">
+        <form class="app unselectable">
             <input dir="auto" type="number" class="cost shadow" id="cost" pattern="none"
                 onKeyPress="if(this.value.length==7) return false;" required autofocus placeholder="سعر المنتج">
             <div class="radiogroup shadow">
@@ -73,9 +73,11 @@ license " free to use  ( with or without modification )"
                 </div>
 
                 <div class="condition condition_1" id="con_1">
+                    
                     <div class="head q1">
                         <p>كيف تريد إضافة نسبة القسط ؟</p>
                     </div>
+
                     <div class="container">
                         <div class="wrapper">
                             <input checked class="state" type="radio" name="inst" id="forLink" value=325>
@@ -86,8 +88,6 @@ license " free to use  ( with or without modification )"
                             </label>
                         </div>
 
-
-
                         <div class="wrapper">
                             <input class="state" type="radio" name="inst" id="percent" value=6.5%>
                             <label class="label" for="percent">
@@ -95,12 +95,14 @@ license " free to use  ( with or without modification )"
                                 <span class="text hint" data-hover="
                                     سيتم اضافه 6.5% من السعر بدون الشحن الى المبلغ الاجمالي ">6.5%</span>
                             </label>
+                        </div>
 
+                        <div class="wrapper">
                             <div class="none">
                                 <input checked class="none" type="radio" name="inst" id="no-inst" value=0>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
 
@@ -141,19 +143,19 @@ license " free to use  ( with or without modification )"
                     </div>
 
                 </div>
-                <div class="btns">
+                <div class="btns unselectable">
                     <input class="shadow btn" id="reset" type="reset">
                     <button type="button" class="shadow btn" id="sub">Submit</button>
                 </div>
             </div>
         </form>
         <div class="container output shadow effect">
-            <div class="eff">
+            <div class="eff unselectable">
                 <span id="red" class="circle red disabeld"></span>
                 <span id="green" class="circle green disabeld"></span>
             </div>
-            <span id="msg">... تــم نســخ النص</span>
-            <button class="shadow btn" id="copy_btn">Copy</button>
+            <span class="unselectable" id="msg">... تــم نســخ النص</span>
+            <button class="shadow btn unselectable" id="copy_btn">Copy</button>
 
             <p dir="rtl" class="area" id="out">
                 هنا يقبع النص النهائي<br>

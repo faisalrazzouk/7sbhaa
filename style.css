@@ -29,8 +29,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--primery);
     color: var(--text);
-    user-select: none;
+    
 }
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
 header {
     color: var(--text);
     height: 30px;
@@ -189,6 +196,7 @@ input::-webkit-inner-spin-button {
 .condition_1 {
     height: 0;
     opacity: 0;
+    transform: scaleY(0);
     transition: 500ms ease-in-out;
 }
 
