@@ -15,7 +15,6 @@ const cost = document.querySelector('#cost');
 const circle_red = document.querySelector('#red');
 const circle_green = document.querySelector('#green');
 
-
 //////////// *كيف تريد إضافة نسبة القسط ؟*
 
 function cond_1() {
@@ -56,18 +55,18 @@ function calculateCost(cost) {
         var tamara1 = cost / 3;
 
         output.innerHTML =
-            ` السعر هوه *(<b>${cost.toFixed(1)}</b>)* : <br>
+            ` السعر هوه *${cost.toFixed(1)}* : <br>
 الدفعات كالأتي : <br>
 عن طريق تابي  <br>
-الدفعة الاولى - *(<b> ${tabby1.toFixed(1)} </b>)* <br>  
-الدفعة الثانية - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
-الدفعة الثالثة - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
-الدفعة الرابعة - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
+الدفعة الاولى - *${tabby1.toFixed(1)}* <br>  
+الدفعة الثانية - *${tabby2.toFixed(1)}* <br>
+الدفعة الثالثة - *${tabby2.toFixed(1)}* <br>
+الدفعة الرابعة - *${tabby2.toFixed(1)}* <br>
 *===============*<br>
 او عن طريق تمارا <br>
-الدفعة الاولى - *(<b> ${tamara1.toFixed(1)} </b>)* <br>
-الدفعة الثانية - *(<b> ${tamara1.toFixed(1)} </b>)* <br>
-الدفعة الثالثة - *(<b> ${tamara1.toFixed(1)} </b>)* 
+الدفعة الاولى - *${tamara1.toFixed(1)}* <br>
+الدفعة الثانية - *${tamara1.toFixed(1)}* <br>
+الدفعة الثالثة - *${tamara1.toFixed(1)}* 
             `;
     } else if (cost == 3201 || cost <= 5000) {
 
@@ -81,18 +80,18 @@ function calculateCost(cost) {
 
         output.innerHTML =
             `
-           السعر هوه *(<b> ${cost.toFixed(1)} </b>)* : <br>
+           السعر هوه *${cost.toFixed(1)}* : <br>
 الدفعات كالأتي : <br>
 عن طريق تابي  <br>
-الدفعة الاولى - *(<b> ${tabby1.toFixed(1)} </b>)* <br>  
-الدفعة الثانية - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
-الدفعة الثالثه - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
-الدفعة الرابعة - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
+الدفعة الاولى - *${tabby1.toFixed(1)}*<br>  
+الدفعة الثانية - *${tabby2.toFixed(1)}*<br>
+الدفعة الثالثه - *${tabby2.toFixed(1)}*<br>
+الدفعة الرابعة - *${tabby2.toFixed(1)}*<br>
 *===============*<br>
 او عن طريق تمارا <br>
-الدفعة الاولى - *(<b> ${tamara1.toFixed(1)} </b>)* <br>
-الدفعة الثانية - *(<b> 1000 </b>)* <br>
-الدفعة الثالثة - *(<b> 1000 </b>)* 
+الدفعة الاولى - *${tamara1.toFixed(1)}*<br>
+        الدفعة الثانية *1000*
+        الدفعة الثالثة *1000*
             `
 
     } else if (cost >= 5001) {
@@ -110,20 +109,23 @@ function calculateCost(cost) {
 
         output.innerHTML =
             `
-  السعر هوه *(<b> ${cost.toFixed(1)} </b>)* على الاقساط يكون كالأتي : <br>
+  السعر هوه (*${cost.toFixed(1)}*) على الاقساط يكون كالأتي : <br>
   تقدر تقسط  من  هذا المبلغ عن طريق رابط  دفع  بقيمه *5000* ريال <br>
   بسويه لك اول  ماتجهز  للطلب , وتكون الدفعات :  <br>
- الدفعة الاولى - *(<b> ${tabby1.toFixed(1)} </b>)* <br>  
-الدفعة الثانية - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
- الدفعة الثالثة - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
-  الدفعة الرابعة - *(<b> ${tabby2.toFixed(1)} </b>)* <br>
+ الدفعة الاولى - *${tabby1.toFixed(1)}*<br>  
+الدفعة الثانية - *${tabby2.toFixed(1)}*<br>
+ الدفعة الثالثة - *${tabby2.toFixed(1)}*<br>
+  الدفعة الرابعة - *${tabby2.toFixed(1)}*<br>
   ===============<br>
-  اما بالنسبة للمبلغ الي فوق ال *(<b> 5000 </b>)* الي  هو *(<b>${transfer.toFixed(1)}</b>)* فيتم  تحويله الان مع دفعة التقسيط  الاولى <br>
+  اما بالنسبة للمبلغ الي فوق ال *5000* الي  هو (*${transfer.toFixed(1)}*) فيتم  تحويله الان مع دفعة التقسيط  الاولى <br>
 
-   يعني  انت  الان لازم  تدفع *(<b> 2500 </b>)* + *(<b>${+transfer.toFixed(1)}</b>)* = *(<b> ${totalToPay.toFixed(1)} </b>)*
-وبعدها 3 اشهر كل شهر *(<b> 833.33 </b>)* ريال`;
+  يعني  انت  الان لازم  تدفع *2500* + *${+transfer.toFixed(1)}* = *${totalToPay.toFixed(1)}*
+وبعدين 3 اشهر كل شهر *833.33* ريال`;
 
     }
+    console.log(tabby1);
+    console.log(tabby2);
+    console.log(tamara1);
 } ///////////// End calculateCost()
 
 ///////////////////////
@@ -152,6 +154,10 @@ function _default(cost1) {
     }
     calculateCost(cost3);
 
+    console.groupCollapsed('for only _default option');
+    console.log(cost1);
+    console.log(cost2);
+    console.log(cost3);
 }
 ///// for global radio button
 
@@ -186,10 +192,18 @@ function reg(cost1) {
             cost3 = 50;
             cost4 = cost2 + cost3;
             cost5 = cost4;
-        } else {
+        }
+        else {
             cost5 = cost2;
         }
     }
+    calculateCost(cost5);
+    console.groupCollapsed('for only regular installment option');
+    console.log(cost1);
+    console.log(cost2);
+    console.log(cost3);
+    console.log(cost4);
+    console.log(cost5);
 } ////////////////////////////end for only regular installment option
 ///////////////////////////////////////////////////////////////////////
 function percent(cost1) {
@@ -218,10 +232,18 @@ function percent(cost1) {
             cost3 = 50;
             cost4 = cost2 + cost3;
             cost5 = cost4;
-        } else {
+        }
+        else {
             cost5 = cost2;
         }
     }
+    calculateCost(cost5);
+    console.groupCollapsed('for only percent installment option 6.5%');
+    console.log(cost1);
+    console.log(cost2);
+    console.log(cost3);
+    console.log(cost4);
+    console.log(cost5);
 }
 
 
@@ -269,7 +291,7 @@ _btn.addEventListener('click', () => {
             reg(cost);
         } else if (_add_percent.checked == true) {
             percent(cost);
-        } else if (costttt1 == 0) {
+        }else if (costttt1 == 0){
             output.innerHTML = `<b>خطـــأ واضـــح</b><br>  لو سمحت كمل معروفك و حطلنا رقم  لنحسبه 😒`;
         }
     } else {
