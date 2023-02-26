@@ -1,0 +1,16 @@
+{
+    "short_name": "slice it",
+    "name": "7sbhaSa7",
+    "icons": [
+      {
+        "src": "logo.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+   ],
+   "start_url": "/index.html",
+   "background_color": "#161d22",
+   "Theme_color": "ecf0f3",
+   "display": "standalone"
+  }
