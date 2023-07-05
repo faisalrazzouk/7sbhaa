@@ -15,11 +15,7 @@ const cost = document.querySelector('#cost');
 const circle_red = document.querySelector('#red');
 const circle_green = document.querySelector('#green');
 
-var disable = document.querySelector(.disable);
-
-for (var i=0, iLen=disable.length; i<iLen; i++) {
-  disable[i].disabled = true;
-} 
+Alert("الاداه قيد التجربه اضغط نعم للمتابعه")
 
 //////////// *كيف تريد إضافة نسبة القسط ؟*
 
