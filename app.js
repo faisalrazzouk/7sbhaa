@@ -15,7 +15,6 @@ const cost = document.querySelector('#cost');
 const circle_red = document.querySelector('#red');
 const circle_green = document.querySelector('#green');
 
-Alert("الاداه قيد التجربه اضغط نعم للمتابعه");
 
 //////////// *كيف تريد إضافة نسبة القسط ؟*
 
