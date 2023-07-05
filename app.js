@@ -3,7 +3,7 @@ const _notAble = document.querySelector('#notAble');
 const _condition_1 = document.querySelector('#con_1');
 const _heavy = document.querySelector('#heavy');
 const _light = document.querySelector('#light');
-const _insurance = document.querySelector('#insurance');
+// const _insurance = document.querySelector('#insurance');
 const _reg_percent = document.querySelector('#forLink');
 const _add_percent = document.querySelector('#percent');
 const _btn = document.querySelector('#sub');
@@ -134,10 +134,12 @@ function _default(cost1) {
     var cost2;
     var cost3;
 
-    if (_light.checked == true && _insurance.checked == true) {
+    // if (_light.checked == true && _insurance.checked == true) {
+    if (_light.checked == true ) {
         cost2 = ((cost1 + 35) / 100) * 3;
         cost3 = cost1 + cost2;
-    } else if (_heavy.checked == true && _insurance.checked == true) {
+    // } else if (_heavy.checked == true && _insurance.checked == true) {
+    } else if (_heavy.checked == true) {
         cost2 = ((cost1 + 50) / 100) * 3;
         cost3 = cost1 + cost2;
     } else if (_light.checked == true) {
@@ -146,9 +148,9 @@ function _default(cost1) {
     } else if (_heavy.checked == true) {
         cost2 = cost1 + 50;
         cost3 = cost2;
-    } else if (_insurance.checked == true) {
-        cost2 = (cost1 / 100) * 3;
-        cost3 = cost1 + cost2;
+    // } else if (_insurance.checked == true) {
+    //     cost2 = (cost1 / 100) * 3;
+    //     cost3 = cost1 + cost2;
     } else {
         cost3 = cost1;
     }
@@ -174,11 +176,13 @@ function reg(cost1) {
         cost2 = cost1 + 325;
         if (cost2 == 325) {
             console.error('cost = 0');
-        } else if (_light.checked == true && _insurance.checked == true) {
+        // } else if (_light.checked == true && _insurance.checked == true) {
+        } else if (_light.checked == true) {
             cost3 = cost2 + 35;
             cost4 = (cost3 / 100) * 3;
             cost5 = cost4 + cost3;
-        } else if (_heavy.checked == true && _insurance.checked == true) {
+        // } else if (_heavy.checked == true && _insurance.checked == true) {
+        } else if (_heavy.checked == true) {
             cost3 = cost2 + 50;
             cost4 = (cost3 / 100) * 3;
             cost5 = cost4 + cost3;
@@ -216,11 +220,13 @@ function percent(cost1) {
         cost2 = cost1 + (cost1 / 100) * 6.5;
         if (cost2 == 0) {
             console.error('cost = 0');
-        } else if (_light.checked == true && _insurance.checked == true) {
+        // } else if (_light.checked == true && _insurance.checked == true) {
+        } else if (_light.checked == true) {
             cost3 = cost2 + 35;
             cost4 = (cost3 / 100) * 3;
             cost5 = cost4 + cost3;
-        } else if (_heavy.checked == true && _insurance.checked == true) {
+        // } else if (_heavy.checked == true && _insurance.checked == true) {
+        } else if (_heavy.checked == true ) {
             cost3 = cost2 + 50;
             cost4 = (cost3 / 100) * 3;
             cost5 = cost4 + cost3;
